@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+	margin: 5px;
+	padding: 1px;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+.banner{
+	width: 100%;
+    height: 250px;
+	animation: banner 10s infinite linear alternate;
+	background-size: 100% 100%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    margin: 5px;
+}
+html{
+	height: 100%;
+}
+body{
+	text-align: center;
+	min-height: 100%;
+	background-image: url(imagenes/rayas.jpg);
+	background-size: cover;
+  
+}
+.header{
+	grid-area: header;
+}
+.logoh{
+	margin-top: 0cm;
+	width: 128.9px;
+	height: 145px;
+	display: flex;
+	justify-content: flex-start;
+	margin-left: 1cm;
+    margin-top: 0cm;
+    border: 30px;
+}
+.navbar{
+	grid-area: navbar;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: space-evenly;
+}
+.grid_container{
+	display: grid;
+	grid-template: 
+	"header" 100px
+	"navbar" 50px
+	"main"	auto
+	"footer" 100%;
+}
+.equipotitulo{
+    text-align: center;
+    padding-top: 2%;
+}
+.pagina{
+	font-family: 'Urbanist';
+	text-decoration: none;
+	color: #ffffff;
+	border: 1cm;
+	background-color: #ca449c;
+	padding: 0.45cm;
+	border-radius: 1cm;
+}
+.pagina:hover{
+	color: #ffffff;
+	background-color: #5a738a;
+}
+.main{
+	grid-area: main;
+	font-family: 'Urbanist';
+	font-size: 1.15em;
+    padding-top: 2%;
+}
+.footer{
+	grid-area: footer;
+    border-top: #5a738a solid 0,05cm;
+    background-color: rgb(255, 0, 174);
+    width: 100%;
+}
+.links{
+	grid-area: links;
+	margin-right: 0.25cm;
+
+}
+.redes1{
+	width: 105px;
+	height: 51.5px;
+}
+.redes2{
+	width: 51.75px;
+	height: 51.5px;
+}
+.redes3{
+	width: 40px;
+	height: 41.5px;
+}
+.lfooter{
+	width: 78.9px;
+	height: 91px;
+}
+
+@keyframes banner{
+	0%, 20%{
+		background-image: url("https://img.freepik.com/foto-gratis/adorable-nina-su-cama-temprano-manana_169016-23853.jpg?w=740&t=st=1665625785~exp=1665626385~hmac=10070560cd4f21b26664cc9743f00453d8092e51869bbdcb5cdc126cf456eb5f");
+	}
+	25%, 45%{
+		background-image: url("https://img.freepik.com/foto-gratis/retrato-nina-adorable-subio-su-cama-manana-soleada_169016-23861.jpg?size=626&ext=jpg&uid=R72832458&ga=GA1.2.2132570645.1648003930");
+	}
+	50%, 70%{
+		background-image: url("https://img.freepik.com/foto-gratis/nino-pequeno-feliz-pijama-cama-dormitorio-juguetes-juegos-duerme-hermosa-ropa-cama-bebes-sueno-diurno-ninos-luz-tenue_1321-2274.jpg?size=626&ext=jpg&uid=R72832458&ga=GA1.2.2132570645.1648003930");
+	}
+	75%, 100%{
+		background-image: url("https://img.freepik.com/foto-gratis/ninos-divirtiendose-juntos_23-2149274674.jpg?size=626&ext=jpg&uid=R72832458&ga=GA1.2.2132570645.1648003930");
+	}
+}
+.capa{
+	width: 100%;
+	height: 250px;
+	position: absolute;
+	top: 0;
+	background: rgba(0,0,0,0.6);
+    margin: 5px;
+}
+.info{
+	z-index: 1;
+	width: 100%;
+    height: 250px;
+	text-align: center;
+    margin: 10px;
+}
+.info h1{
+	color: #fff;
+	font-size: 45px;
+	margin-bottom: 1px;
+	letter-spacing: 1px;
+}
+.info p{
+	color: #c7c7c7;
+	line-height: 1.7;
+	margin-bottom: 30px;
+}
+.info a{
+	color: #fff;
+	text-decoration: none;
+	background: #e030c5;
+	padding: 16px 37px;
+	border-radius: 50px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+
+	.grid_container{
+		grid-template: 
+		"header 	navbar   navbar" 150px 
+		"main	 	main      main"  100px
+		"footer 	footer   footer" 100% /
+		200px 		auto;
+	}
+	.main{
+		font-size: 1.5em;
+	}
+	.equipo{
+		grid-area: equipo;
+	}
+	.navbar{
+        grid-area: navbar;
+		margin-left: 3cm;
+	}
+    body{
+        grid-area: body;
+        text-align: center;
+        min-height: 100%;
+        background-image: url(imagenes/rayas.jpg);
+        background-size: cover;
+    
+    }
+    .banner{
+        width: 100%;
+    }
+    .equipotitulo{
+		grid-area: titulo;
+        text-align: center;
+	}
+    .logoh {
+    margin-top: 0cm;
+	width: 128.9px;
+	height: 145px;
+	display: flex;
+	justify-content: flex-start;
+	margin-left: 1cm;
+    margin-top: 0%;
+    padding-top: 0%;
+    }
+}
+
+
+@media (min-width: 992px) and (max-width:1199px) {
+	.grid_container{
+		grid-template: 
+		"header 	header 	navbar		navbar" 	100px
+        "banner     banner  banner      banner"     100%
+		"main	 	main 	main		main" 		100%
+		"footer    footer 	footer		footer" 	100% /
+	}
+	.main{
+        grid-area: main;
+		font-size: 1.525em;
+	}
+	.equipo{
+		grid-area: equipo;
+		grid-template: 
+		"titulo		titulo		titulo		titulo" 100%
+		"main       main         main        main" 100%
+		"texto		texto		texto		texto" 100% /
+		1fr			1fr			1fr			1fr	;
+		margin-bottom: 1cm;
+	}
+	.equipotitulo{
+		grid-area: titulo;
+        text-align: center;
+	}
+    .banner{
+        width: 100%;
+    }
+    .footer{
+        padding-top: 0%;
+    }
+	.logoh {
+	width: 128.9px;
+	height: 145px;
+	display: flex;
+	justify-content: flex-start;
+	margin-left: 1cm;
+    padding: 10px;
+    margin-top: 0%;
+    }
+}
+@media (min-width:1200px) {
+	.grid_container{
+		width: 100%;
+		margin: auto;
+		grid-template: 
+		"header 	navbar 	navbar		navbar" 	100%
+		"main	 	main 	main		main" 		100%
+		"footer 	footer 	footer		footer" 	100% /
+	}
+	body{
+		min-height: 100%;
+		background-image: url(imagenes/rayas.jpg);
+		background-size: cover;
+	
+	}
+	.main{
+        grid-area: main;
+		font-size: 1.55em;
+	}
+	.equipo{
+		grid-area: equipo;
+		grid-template: 
+		"equipo titulo" 85px
+		"babyboo" 100%
+		1fr			1fr			1fr			1fr	;
+		margin-bottom: 1cm;
+	}
+	.equipotitulo{
+		grid-area: titulo;
+        text-align: center;
+	}
+	.footer{
+        grid-area: footer;
+		background-color: #e030c5;
+        width: 100%;
+
+	}
+    .banner {
+        width: 100%;
+    }
+
+}
