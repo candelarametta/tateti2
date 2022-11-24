@@ -1,22 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-*{
-	margin: 5px;
-	padding: 1px;
-	box-sizing: border-box;
-	font-family: sans-serif;
-}
-.banner{
-	width: 100%;
-    height: 250px;
-	animation: banner 10s infinite linear alternate;
-	background-size: 100% 100%;
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-    margin: 5px;
-}
+
+	*{
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}	
 html{
 	height: 100%;
 }
@@ -25,7 +14,7 @@ body{
 	min-height: 100%;
 	background-image: url(imagenes/rayas.jpg);
 	background-size: cover;
-  
+    display: inline-block;
 }
 .header{
 	grid-area: header;
@@ -42,11 +31,12 @@ body{
 }
 .navbar{
 	grid-area: navbar;
-	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
-	align-items: center;
+	align-items: right;
 	justify-content: space-evenly;
+	width: 100%;
+	text-align: right;
 }
 .grid_container{
 	display: grid;
@@ -60,6 +50,31 @@ body{
     text-align: center;
     padding-top: 2%;
 }
+.equipotitulo2{
+    text-align: center;
+    padding-top: 2%;
+}
+.historia {
+	display: inline-block;
+	float: right;
+	width: 50%;
+	margin-top: 19%;
+	margin-right: 5%;
+}
+.babyboo {
+	display: inline-block;
+	text-align: center;
+	margin-left: 5%;
+}
+.atencion{
+ font-size: 22px;
+}
+.ubicacion{
+	display: block;
+	}
+.mapa{
+	display: inline-block;
+}
 .pagina{
 	font-family: 'Urbanist';
 	text-decoration: none;
@@ -68,6 +83,9 @@ body{
 	background-color: #ca449c;
 	padding: 0.45cm;
 	border-radius: 1cm;
+}
+.footer-copyright {
+	text-align: right;
 }
 .pagina:hover{
 	color: #ffffff;
@@ -84,11 +102,49 @@ body{
     border-top: #5a738a solid 0,05cm;
     background-color: rgb(255, 0, 174);
     width: 100%;
+	height: 100px;
+	padding-top: 2%;
+}
+.btn{
+background-color: #e030c5;
+width: 100px;
+height: 60px;
+margin-bottom: 7% ;
 }
 .links{
+	float: left;
+	height: auto;
 	grid-area: links;
 	margin-right: 0.25cm;
+}
+.alerta {
+color: rgb(255, 0, 174);
+text-align: center;
+}
+.gallery {
+	margin: 5px;
+	border: 1px solid #ccc;
+	width: 20%;
+	display: inline-block;
+	justify-content: space-evenly;
+	margin-right: 5%;
+	margin-bottom: 5%;
+  }
+  
+  div.gallery:hover {
+	border: 1px solid #777;
+  }
 
+.babyboo {
+	margin-bottom: 5% ;
+}
+.w3-card-4{
+	display: inline-block;
+	margin-top: 5%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 22%;
+	margin-bottom: 15px;
+	padding-top: 15px;
 }
 .redes1{
 	width: 105px;
@@ -100,187 +156,555 @@ body{
 }
 .redes3{
 	width: 40px;
-	height: 41.5px;
+	height: 50px;
+	padding-top: 3%;
+	padding-bottom: 3%;
 }
 .lfooter{
 	width: 78.9px;
 	height: 91px;
 }
-
-@keyframes banner{
-	0%, 20%{
-		background-image: url("https://img.freepik.com/foto-gratis/adorable-nina-su-cama-temprano-manana_169016-23853.jpg?w=740&t=st=1665625785~exp=1665626385~hmac=10070560cd4f21b26664cc9743f00453d8092e51869bbdcb5cdc126cf456eb5f");
-	}
-	25%, 45%{
-		background-image: url("https://img.freepik.com/foto-gratis/retrato-nina-adorable-subio-su-cama-manana-soleada_169016-23861.jpg?size=626&ext=jpg&uid=R72832458&ga=GA1.2.2132570645.1648003930");
-	}
-	50%, 70%{
-		background-image: url("https://img.freepik.com/foto-gratis/nino-pequeno-feliz-pijama-cama-dormitorio-juguetes-juegos-duerme-hermosa-ropa-cama-bebes-sueno-diurno-ninos-luz-tenue_1321-2274.jpg?size=626&ext=jpg&uid=R72832458&ga=GA1.2.2132570645.1648003930");
-	}
-	75%, 100%{
-		background-image: url("https://img.freepik.com/foto-gratis/ninos-divirtiendose-juntos_23-2149274674.jpg?size=626&ext=jpg&uid=R72832458&ga=GA1.2.2132570645.1648003930");
-	}
-}
-.capa{
+.container {
+	max-width: 1000px;
+	position: relative;
+	margin: auto;
+  }
+  
+  /* Hide the images by default */
+  .elementoCarousel {
+	display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+  }
+  .prev {
+	left: 0%;
+	border-radius: 3px 0 0 3px ;
+  }
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+	background-color: rgba(244, 60, 146, 0.8);
+	padding: 5px;
+  }
+  
+  /* Caption text */
+  .text {
+	color: #f2f2f2;
+	font-size: 15px;
+	padding: 8px 12px;
+	position: absolute;
+	bottom: 0px;
 	width: 100%;
-	height: 250px;
+	text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
 	position: absolute;
 	top: 0;
-	background: rgba(0,0,0,0.6);
-    margin: 5px;
-}
-.info{
-	z-index: 1;
-	width: 100%;
-    height: 250px;
-	text-align: center;
-    margin: 10px;
-}
-.info h1{
-	color: #fff;
-	font-size: 45px;
-	margin-bottom: 1px;
-	letter-spacing: 1px;
-}
-.info p{
-	color: #c7c7c7;
-	line-height: 1.7;
-	margin-bottom: 30px;
-}
-.info a{
-	color: #fff;
-	text-decoration: none;
-	background: #e030c5;
-	padding: 16px 37px;
-	border-radius: 50px;
-}
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+	background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+	animation-name: fade;
+	animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+	from {opacity: .4}
+	to {opacity: 1}
+  }
+  
+  #myBtn {
+	display: none; /* Esconder por default */
+	position: fixed; /* Position */
+	bottom: 3%;
+	right: 4%; 
+	z-index: 99; /* Que nada se superponga */
+	border: none; 
+	outline: none; 
+	background-color: rgb(146, 2, 208);
+	color: #f2f2f2; 
+	cursor: pointer; 
+	padding: 1rem;
+	border-radius: 10px;
+	font-size: 1.1rem;
+  }
+  
+  #myBtn:hover {
+	background-color: rgb(93, 243, 178); /* Add a dark-grey background on hover */
+  }
+
 @media (min-width: 768px) and (max-width: 991px) {
-
-	.grid_container{
-		grid-template: 
-		"header 	navbar   navbar" 150px 
-		"main	 	main      main"  100px
-		"footer 	footer   footer" 100% /
-		200px 		auto;
-	}
-	.main{
-		font-size: 1.5em;
-	}
-	.equipo{
-		grid-area: equipo;
-	}
-	.navbar{
-        grid-area: navbar;
-		margin-left: 3cm;
-	}
-    body{
-        grid-area: body;
-        text-align: center;
-        min-height: 100%;
-        background-image: url(imagenes/rayas.jpg);
-        background-size: cover;
-    
-    }
-    .banner{
-        width: 100%;
-    }
-    .equipotitulo{
-		grid-area: titulo;
-        text-align: center;
-	}
-    .logoh {
-    margin-top: 0cm;
-	width: 128.9px;
-	height: 145px;
-	display: flex;
-	justify-content: flex-start;
-	margin-left: 1cm;
-    margin-top: 0%;
-    padding-top: 0%;
-    }
+	*{
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}	
+html{
+	height: 100%;
+}
+body{
+	text-align: center;
+	min-height: 100%;
+	background-image: url(imagenes/rayas.jpg);
+	background-size: cover;
+    display: inline-block;
+}
+.navbar{
+	grid-area: navbar;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: right;
+	justify-content: space-evenly;
+	width: 100%;
+	text-align: right;
+	padding-right: 20%;
+}
+.grid_container{
+	display: grid;
+	grid-template: 
+	"header" 100px
+	"navbar" 50px
+	"main"	auto
+	"footer" 100%;
+}
+.equipotitulo{
+    text-align: center;
+    padding-top: 2%;
+}
+.equipotitulo2{
+    text-align: center;
+	width: 80%;
+	margin-left: 10%;
+}
+.historia {
+	display: block;
+	float: none;
+	width: 80%;
+	margin-top: 5%;
+	margin-right: 5%;
+	margin-left: 10%;
+}
+.babyboo {
+	display: inline-block;
+	text-align: center;
+	margin-left: 5%;
+}
+.atencion{
+	font-size: 22px;
+   }
+   .ubicacion{
+	   display: block;
+	   }
+   .mapa{
+	   display: inline-block;
+   }
+.pagina{
+	font-family: 'Urbanist';
+	text-decoration: none;
+	color: #ffffff;
+	border: 1cm;
+	background-color: #ca449c;
+	padding: 0.45cm;
+	border-radius: 1cm;
+}
+.footer-copyright {
+	text-align: right;
+}
+.pagina:hover{
+	color: #ffffff;
+	background-color: #5a738a;
+}
+.main{
+	grid-area: main;
+	font-family: 'Urbanist';
+	font-size: 1.15em;
+    padding-top: 2%;
+	width: 100%;
+}
+.footer{
+	grid-area: footer;
+    border-top: #5a738a solid 0,05cm;
+    background-color: rgb(255, 0, 174);
+    width: 100%;
+	height: 100px;
+	padding-top: 2%;
 }
 
-
-@media (min-width: 992px) and (max-width:1199px) {
-	.grid_container{
-		grid-template: 
-		"header 	header 	navbar		navbar" 	100px
-        "banner     banner  banner      banner"     100%
-		"main	 	main 	main		main" 		100%
-		"footer    footer 	footer		footer" 	100% /
-	}
-	.main{
-        grid-area: main;
-		font-size: 1.525em;
-	}
-	.equipo{
-		grid-area: equipo;
-		grid-template: 
-		"titulo		titulo		titulo		titulo" 100%
-		"main       main         main        main" 100%
-		"texto		texto		texto		texto" 100% /
-		1fr			1fr			1fr			1fr	;
-		margin-bottom: 1cm;
-	}
-	.equipotitulo{
-		grid-area: titulo;
-        text-align: center;
-	}
-    .banner{
-        width: 100%;
-    }
-    .footer{
-        padding-top: 0%;
-    }
-	.logoh {
-	width: 128.9px;
-	height: 145px;
-	display: flex;
-	justify-content: flex-start;
-	margin-left: 1cm;
-    padding: 10px;
-    margin-top: 0%;
-    }
+.alerta {
+color: rgb(255, 0, 174);
+text-align: center;
 }
-@media (min-width:1200px) {
-	.grid_container{
-		width: 100%;
-		margin: auto;
-		grid-template: 
-		"header 	navbar 	navbar		navbar" 	100%
-		"main	 	main 	main		main" 		100%
-		"footer 	footer 	footer		footer" 	100% /
+.gallery {
+	margin: 5px;
+	border: 1px solid #ccc;
+	width: 80%;
+	display: inline-block;
+	justify-content: space-evenly;
+	margin-left: 6%;
+	margin-bottom: 5%;
+  }
+  
+  div.gallery:hover {
+	border: 1px solid #777;
+  }
+
+.babyboo {
+	margin-bottom: 5% ;
+}
+.w3-card-4{
+	display: block;
+	margin-top: 5%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 100%;
+	margin-bottom: 15px;
+	padding-top: 15px;
+    margin-left: 40%;
+}
+.container {
+	max-width: 1000px;
+	position: relative;
+	margin: auto;
+  }
+  
+  /* Hide the images by default */
+  .elementoCarousel {
+	display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+  }
+  .prev {
+	left: 0%;
+	border-radius: 3px 0 0 3px ;
+  }
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+	background-color: rgba(244, 60, 146, 0.8);
+	padding: 5px;
+  }
+  
+  /* Caption text */
+  .text {
+	color: #f2f2f2;
+	font-size: 15px;
+	padding: 8px 12px;
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+	background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+	animation-name: fade;
+	animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+	from {opacity: .4}
+	to {opacity: 1}
+  }
+  
+}
+	@media (min-width: 400px) and (max-width: 768px) {
+		*{
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}	
+	html{
+		height: 100%;
 	}
 	body{
+		text-align: center;
 		min-height: 100%;
 		background-image: url(imagenes/rayas.jpg);
 		background-size: cover;
-	
+		display: inline-block;
 	}
-	.main{
-        grid-area: main;
-		font-size: 1.55em;
+	.navbar{
+		grid-area: navbar;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		align-items: right;
+		justify-content: space-evenly;
+		width: 100%;
+		text-align: right;
+		padding-right: 20%;
 	}
-	.equipo{
-		grid-area: equipo;
+	.grid_container{
+		display: grid;
 		grid-template: 
-		"equipo titulo" 85px
-		"babyboo" 100%
-		1fr			1fr			1fr			1fr	;
-		margin-bottom: 1cm;
+		"header" 100px
+		"navbar" 50px
+		"main"	auto
+		"footer" 100%;
 	}
 	.equipotitulo{
-		grid-area: titulo;
-        text-align: center;
+		text-align: center;
+		padding-top: 2%;
+	}
+	.equipotitulo2{
+		text-align: center;
+		width: 80%;
+		margin-left: 10%;
+	}
+	.historia {
+		display: block;
+		float: none;
+		width: 80%;
+		margin-top: 5%;
+		margin-right: 5%;
+		margin-left: 10%;
+	}
+	.babyboo {
+		display: inline-block;
+		text-align: center;
+		margin-left: 5%;
+	}
+	.atencion{
+		font-size: 22px;
+	   }
+	   .ubicacion{
+		   display: block;
+		   }
+	   .mapa{
+		   display: inline-block;
+	   }
+	.pagina{
+		font-family: 'Urbanist';
+		text-decoration: none;
+		color: #ffffff;
+		border: 1cm;
+		background-color: #ca449c;
+		padding: 0.45cm;
+		border-radius: 1cm;
+	}
+	.footer-copyright {
+		text-align: right;
+	}
+	.pagina:hover{
+		color: #ffffff;
+		background-color: #5a738a;
+	}
+	.main{
+		grid-area: main;
+		font-family: 'Urbanist';
+		font-size: 1.15em;
+		padding-top: 2%;
+		width: 100%;
 	}
 	.footer{
-        grid-area: footer;
-		background-color: #e030c5;
-        width: 100%;
-
+		grid-area: footer;
+		border-top: #5a738a solid 0,05cm;
+		background-color: rgb(255, 0, 174);
+		width: 100%;
+		height: 100px;
+		padding-top: 2%;
 	}
-    .banner {
-        width: 100%;
-    }
-
-}
+	
+	.alerta {
+	color: rgb(255, 0, 174);
+	text-align: center;
+	}
+	.gallery {
+		margin: 5px;
+		border: 1px solid #ccc;
+		width: 80%;
+		display: inline-block;
+		justify-content: space-evenly;
+		margin-left: 6%;
+		margin-bottom: 5%;
+	  }
+	  
+	  div.gallery:hover {
+		border: 1px solid #777;
+	  }
+	
+	.babyboo {
+		margin-bottom: 5% ;
+	}
+	.w3-card-4{
+		display: block;
+		margin-top: 5%;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		width: 100%;
+		margin-bottom: 15px;
+		padding-top: 15px;
+		margin-left: 40%;
+	}
+	.container {
+		max-width: 1000px;
+		position: relative;
+		margin: auto;
+	  }
+	  
+	  /* Hide the images by default */
+	  .elementoCarousel {
+		display: none;
+	  }
+	  
+	  /* Next & previous buttons */
+	  .prev, .next {
+		cursor: pointer;
+		position: absolute;
+		top: 50%;
+		width: auto;
+		margin-top: -22px;
+		padding: 16px;
+		color: white;
+		font-weight: bold;
+		font-size: 18px;
+		transition: 0.6s ease;
+		border-radius: 0 3px 3px 0;
+		user-select: none;
+	  }
+	  
+	  /* Position the "next button" to the right */
+	  .next {
+		right: 0;
+		border-radius: 3px 0 0 3px;
+	  }
+	  .prev {
+		left: 0%;
+		border-radius: 3px 0 0 3px ;
+	  }
+	  /* On hover, add a black background color with a little bit see-through */
+	  .prev:hover, .next:hover {
+		background-color: rgba(244, 60, 146, 0.8);
+		padding: 5px;
+	  }
+	  
+	  /* Caption text */
+	  .text {
+		color: #f2f2f2;
+		font-size: 15px;
+		padding: 8px 12px;
+		position: absolute;
+		bottom: 0px;
+		width: 100%;
+		text-align: center;
+	  }
+	  
+	  /* Number text (1/3 etc) */
+	  .numbertext {
+		color: #f2f2f2;
+		font-size: 12px;
+		padding: 8px 12px;
+		position: absolute;
+		top: 0;
+	  }
+	  
+	  /* The dots/bullets/indicators */
+	  .dot {
+		cursor: pointer;
+		height: 15px;
+		width: 15px;
+		margin: 0 2px;
+		background-color: #bbb;
+		border-radius: 50%;
+		display: inline-block;
+		transition: background-color 0.6s ease;
+	  }
+	  
+	  .active, .dot:hover {
+		background-color: #717171;
+	  }
+	  
+	  /* Fading animation */
+	  .fade {
+		animation-name: fade;
+		animation-duration: 1.5s;
+	  }
+	  
+	  @keyframes fade {
+		from {opacity: .4}
+		to {opacity: 1}
+	  }
+	  
+	}
+	
